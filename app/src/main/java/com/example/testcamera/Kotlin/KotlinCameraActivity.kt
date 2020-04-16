@@ -17,7 +17,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
-import com.example.testcamera.Java.JavaCameraActivity
 import com.example.testcamera.R
 import java.io.File
 import java.io.IOException
@@ -29,8 +28,8 @@ class KotlinCameraActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var btnClickKotlin: Button
     lateinit var imagePhotoKotlin: ImageView
 
-    private val CAMERA_REQUEST_CODE = 100
-    private val REQUEST_EXTERNAL_STORAGE_RESULT = 101
+    private val CAMERA_REQUEST_CODE = 102
+    private val REQUEST_EXTERNAL_STORAGE_RESULT = 103
     private var mImageFileLocation = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
