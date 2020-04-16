@@ -85,8 +85,8 @@ public class JavaCameraActivity extends AppCompatActivity implements View.OnClic
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == CAMERA_REQUEST_CODE && resultCode == RESULT_OK) {
 
-            Bitmap photoCaptureBitmap = BitmapFactory.decodeFile(mImageFileLocation);
-            imagePhotoJava.setImageBitmap(photoCaptureBitmap);
+//            Bitmap photoCaptureBitmap = BitmapFactory.decodeFile(mImageFileLocation);
+//            imagePhotoJava.setImageBitmap(photoCaptureBitmap);
 
             setReducesImageSize();
         }
@@ -130,8 +130,7 @@ public class JavaCameraActivity extends AppCompatActivity implements View.OnClic
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onClick(View v) {
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
             callCameraApp();
         } else {
             if (shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
